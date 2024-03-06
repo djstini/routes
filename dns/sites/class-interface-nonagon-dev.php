@@ -1,5 +1,7 @@
 <?php
 /**
+ * Config file for the interface.nonagon.dev subdomain.
+ * 
  * @author dennisstinauer<dennis@stinauer.net>
  */
 
@@ -16,6 +18,7 @@ class Interface_Nonagon_Dev extends Subdomain_Handler{
         return new Interface_Nonagon_Dev($auth_api_token, $zone_id, $value_ipv4, $value_ipv6);
     }
 
+    // do the update :3
     public function update_records(){
         $this->update_record($this->get_record('interface', 'A'), $this->value_ipv4);
         $this->update_record($this->get_record('interface', 'AAAA'), $this->value_ipv6);

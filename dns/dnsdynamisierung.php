@@ -5,7 +5,7 @@
  * @author dennisstinauer<dennis@stinauer.net>
  */
 
- require_once '../../.config.php';
+ require_once '.dnsconfig.php';
  require_once 'sites/abstract-class-subdomain-handler.php';
  require_once 'sites/class-interface-nonagon-dev.php';
 
@@ -13,5 +13,5 @@ $interface_nonagon_dev = Interface_Nonagon_Dev::factory('193.159.141.232', '2003
 if ( false !== $interface_nonagon_dev ){
    $interface_nonagon_dev->update_records(); 
 } else {
-   echo "lol1";
+   echo "lol :3";
 }
