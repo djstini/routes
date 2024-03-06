@@ -5,7 +5,7 @@
  * @author dennisstinauer<dennis@stinauer.net>
  */
 
- require_once '.dnsconfig.php';
+ require_once '.config.php';
  require_once 'sites/abstract-class-subdomain-handler.php';
  require_once 'sites/class-interface-nonagon-dev.php';
 
