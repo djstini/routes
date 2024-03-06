@@ -156,4 +156,7 @@ abstract class Subdomain_Handler{
             }
         }
     }
+
+    // force Child-Classes to implement the update_records function.
+    public abstract  function update_records();
 }
