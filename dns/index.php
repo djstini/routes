@@ -12,7 +12,7 @@
 // Check Secret 
 if( ! defined('DNS_SECRET') || DNS_SECRET !== base64_decode($_GET['secret'])){
    http_response_code(418);
-   exit;
+   die();
 }
 
 $interface_nonagon_dev = Interface_Nonagon_Dev::factory('193.159.141.232', '2003:c1:c7ff:10e:1eed:6fff:fe7a:ff1f');
