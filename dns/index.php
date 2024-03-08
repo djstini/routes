@@ -38,7 +38,7 @@ if ( ! isset( $ipv4 ) || ! isset( $ipv6 ) ) {
 	die( 'IPS nicht gefunden.' );
 }
 
-$values = array($ipv4, $ipv6);
+$values = array('ipv4' => $ipv4, 'ipv6' => $ipv6);
 
 // REGISTER SITES.
 $interface_nonagon_dev = Interface_Nonagon_Dev::update_records( $values );
