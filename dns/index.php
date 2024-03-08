@@ -38,11 +38,13 @@ if ( ! isset( $ipv4 ) || ! isset( $ipv6 ) ) {
 	die( 'IPS nicht gefunden.' );
 }
 
+$values = array($ipv4, $ipv6);
+
 // REGISTER SITES.
-$interface_nonagon_dev = Interface_Nonagon_Dev::update_records( $ipv4, $ipv6 );
-$jelly_nonagon_dev     = Jelly_Nonagon_Dev::update_records( $ipv4, $ipv6 );
-$matrix_nonagon_dev    = Matrix_Nonagon_Dev::update_records( $ipv4, $ipv6 );
-$tandoor_nonagon_dev   = Tandoor_Nonagon_Dev::update_records( $ipv4, $ipv6 );
+$interface_nonagon_dev = Interface_Nonagon_Dev::update_records( $values );
+$jelly_nonagon_dev     = Jelly_Nonagon_Dev::update_records( $values );
+$matrix_nonagon_dev    = Matrix_Nonagon_Dev::update_records( $values );
+$tandoor_nonagon_dev   = Tandoor_Nonagon_Dev::update_records( $values );
 
 if ( $interface_nonagon_dev && $jelly_nonagon_dev && $matrix_nonagon_dev && $tandoor_nonagon_dev ) {
 	http_response_code( 200 );
