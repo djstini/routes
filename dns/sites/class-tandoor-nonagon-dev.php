@@ -25,7 +25,7 @@ class Tandoor_Nonagon_Dev extends Subdomain_Handler {
 		$zone_id        = DNS_ZONE_ID_NONAGON_DEV;
 
 		// Instanciate the Subdomain Handler.
-		$interface = Interface_Nonagon_Dev( $auth_api_token, $zone_id );
+		$interface = new Interface_Nonagon_Dev( $auth_api_token, $zone_id );
 
 		// update the records.
 		if ( isset( $values['ipv4'] ) && ! empty( $values['ipv4'] ) ) {
