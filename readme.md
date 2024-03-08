@@ -24,7 +24,7 @@ Alle Parameter müssen Base64 encoded sein.
 
  - DNS_AUTH_API_TOKEN    *the token for the hetzner dns auth api*
  - DNS_SECRET    *the secret given via the request*
-
+ - DNS_ZONE_ID_NONAGON_DEV *the zone ID for the hetzner zonefile*
  **Sites**
 
  Der DNS Service läuft über meherer Sites, diese werden im verzeichnis /sites/ definiert.
@@ -36,4 +36,10 @@ Alle Parameter müssen Base64 encoded sein.
  Da jede Site noch erweiternde Config benötigt hier weitere "Site-speziefische" Konstanten für die `/dns/.config.php`
 
  - class-interface-nonagon-dev.php -> interface.nonagon.dev
-    - DNS_ZONE_ID_INTERFACE_NONAGON_DEV    *the zone ID for the hetzner zonefile*
+ - class-jelly-nonagon-dev.php -> jelly.nonagon.dev
+ - class-tandoor-nonagon-dev.php -> tandoor.nonagon.dev
+ - class-matrix-nonagon-dev.php -> matrix.nonagon.dev
+
+ ### README:
+ I am not so sure if the architectural divide between installs is a good idea.. i thought it would maybe be necessary for more complex configs,, but i dont know if that will ever be required.. but oh well. it should work anyways.
+ 
