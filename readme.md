@@ -2,12 +2,12 @@
 
 This Repo contains "API Routes" hosted on my Hetzner Server under the /routes/ directory.
 
-## DNS
+# DNS
 
 ENDPOINTS: 
 - GET: /routes/dns
 
-### GET: /routes/dns
+## GET: /routes/dns
 
 **Erforderliche Parameter**
 
@@ -40,6 +40,6 @@ Alle Parameter müssen Base64 encoded sein.
  - class-tandoor-nonagon-dev.php -> tandoor.nonagon.dev
  - class-matrix-nonagon-dev.php -> matrix.nonagon.dev
 
- ### README:
+ ## README:
  I am not so sure if the architectural divide between installs is a good idea.. i thought it would maybe be necessary for more complex configs,, but i dont know if that will ever be required.. but oh well. it should work anyways.
  
