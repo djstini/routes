@@ -12,7 +12,7 @@ require_once 'sites/abstract-class-subdomain-handler.php';
 require_once 'sites/class-interface-nonagon-dev.php';
 
 // Check Secret.
-if ( ! defined( 'DNS_SECRET' ) || ! isset( $_GET['secret'] ) || empty( $_GET['secret'] ) ||  DNS_SECRET !== base64_decode( $_GET['secret'] ) ) {
+if ( ! defined( 'DNS_SECRET' ) || ! isset( $_GET['secret'] ) || empty( $_GET['secret'] ) || DNS_SECRET !== base64_decode( $_GET['secret'] ) ) {
 	http_response_code( 418 );
 	die();
 }

@@ -30,7 +30,7 @@ abstract class Subdomain_Handler {
 	 *
 	 * @var int
 	 */
-	private int $ttl = 600;
+	private int $ttl = 300;
 
 	/**
 	 * Existing Records Array
