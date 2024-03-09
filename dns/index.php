@@ -13,6 +13,7 @@ require_once 'sites/class-interface-nonagon-dev.php';
 require_once 'sites/class-jelly-nonagon-dev.php';
 require_once 'sites/class-tandoor-nonagon-dev.php';
 require_once 'sites/class-matrix-nonagon-dev.php';
+require_once 'sites/class-minecraft-nonagon-dev.php';
 
 
 
@@ -41,6 +42,7 @@ $interface_nonagon_dev = Interface_Nonagon_Dev::update_records( $values );
 $jelly_nonagon_dev     = Jelly_Nonagon_Dev::update_records( $values );
 $matrix_nonagon_dev    = Matrix_Nonagon_Dev::update_records( $values );
 $tandoor_nonagon_dev   = Tandoor_Nonagon_Dev::update_records( $values );
+$minecraft_nonagon_dev = Minecraft_Nonagon_Dev::update_records( $values );
 
 if ( $interface_nonagon_dev && $jelly_nonagon_dev && $matrix_nonagon_dev && $tandoor_nonagon_dev ) {
 	http_response_code( 200 );

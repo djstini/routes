@@ -9,7 +9,7 @@
 /**
  * Class to handle the registration of interface.nonagon.dev subdomain.
  */
-class Matrix_Nonagon_Dev extends Subdomain_Handler {
+class Minecraft_Nonagon_Dev extends Subdomain_Handler {
 	/**
 	 * Update Records interface method.
 	 *
@@ -25,11 +25,11 @@ class Matrix_Nonagon_Dev extends Subdomain_Handler {
 		$zone_id        = DNS_ZONE_ID_NONAGON_DEV;
 
 		// Instanciate the Subdomain Handler.
-		$interface = new Matrix_Nonagon_Dev( $auth_api_token, $zone_id );
+		$interface = new Minecraft_Nonagon_Dev( $auth_api_token, $zone_id );
 
 		// update the records.
 		if ( isset( $values['ipv4'] ) && ! empty( $values['ipv4'] ) ) {
-			$ipv4_update = $interface->update_record( $interface->get_record( 'matrix', 'A' ), $values['ipv4'] );
+			$ipv4_update = $interface->update_record( $interface->get_record( 'tandoor', 'A' ), $values['ipv4'] );
 		}
 
 		return $ipv4_update;
