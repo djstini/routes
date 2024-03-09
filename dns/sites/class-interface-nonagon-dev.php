@@ -31,10 +31,7 @@ class Interface_Nonagon_Dev extends Subdomain_Handler {
 		if ( isset( $values['ipv4'] ) && ! empty( $values['ipv4'] ) ) {
 			$ipv4_update = $interface->update_record( $interface->get_record( 'interface', 'A' ), $values['ipv4'] );
 		}
-		if ( isset( $values['ipv6'] ) && ! empty( $values['ipv6'] ) ) {
-			$ipv6_update = $interface->update_record( $interface->get_record( 'interface', 'AAAA' ), $values['ipv6'] );
-		}
 
-		return $ipv4_update && $ipv6_update;
+		return $ipv4_update;
 	}
 }

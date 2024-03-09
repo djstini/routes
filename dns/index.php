@@ -24,21 +24,17 @@ if ( ! defined( 'DNS_SECRET' ) || ! isset( $_GET['secret'] ) || empty( $_GET['se
 
 // GET AND DECODE THE IPs.
 $ipv4_b64 = $_GET['ipv4'];
-$ipv6_b64 = $_GET['ipv6'];
 
 if ( isset( $ipv4_b64 ) && ! empty( $ipv4_b64 ) ) {
 	$ipv4 = base64_decode( $ipv4_b64 );
 }
-if ( isset( $ipv6_b64 ) && ! empty( $ipv6_b64 ) ) {
-	$ipv6 = base64_decode( $ipv6_b64 );
-}
 
 // FAIL IF IPS NOT FOUND.
-if ( ! isset( $ipv4 ) || ! isset( $ipv6 ) ) {
+if ( ! isset( $ipv4 ) ) {
 	die( 'IPS nicht gefunden.' );
 }
 
-$values = array('ipv4' => $ipv4, 'ipv6' => $ipv6);
+$values = array('ipv4' => $ipv4 );
 
 // REGISTER SITES.
 $interface_nonagon_dev = Interface_Nonagon_Dev::update_records( $values );
