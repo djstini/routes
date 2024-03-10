@@ -29,7 +29,7 @@ class Minecraft_Nonagon_Dev extends Subdomain_Handler {
 
 		// update the records.
 		if ( isset( $values['ipv4'] ) && ! empty( $values['ipv4'] ) ) {
-			$ipv4_update = $interface->update_record( $interface->get_record( 'tandoor', 'A' ), $values['ipv4'] );
+			$ipv4_update = $interface->update_record( $interface->get_record( 'minecraft', 'A' ), $values['ipv4'] );
 		}
 
 		return $ipv4_update;
