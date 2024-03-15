@@ -46,4 +46,5 @@ $minecraft_nonagon_dev = Minecraft_Nonagon_Dev::update_records( $values );
 
 if ( $interface_nonagon_dev && $jelly_nonagon_dev && $matrix_nonagon_dev && $tandoor_nonagon_dev ) {
 	http_response_code( 200 );
+	echo "success";
 }
