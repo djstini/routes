@@ -110,9 +110,6 @@ abstract class Subdomain_Handler {
 
 		$status = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
 
-		echo 'HTTP Status Code: ' . curl_getinfo( $ch, CURLINFO_HTTP_CODE ) . PHP_EOL;
-		echo 'Response Body: ' . $response . PHP_EOL;
-
 		// close curl resource to free up system resources.
 		curl_close( $ch );
 
