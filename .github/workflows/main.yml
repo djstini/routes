@@ -1,19 +1,17 @@
-on: push
 name: Deploy website on push
+on: push
+
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  deploy:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v4
     - name: Get latest code
-      uses: actions/checkout@v4
-    
-    - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      uses: burnett01/rsync-deployments@7.0.1
       with:
-        server: ${{ secrets.ftp_host }}
-        username: ${{ secrets.ftp_user }}
-        password: ${{ secrets.ftp_password }}
-        protocol: ftps
-        port: 21
-        server-dir: ${{ secrets.ftp_directory }}
+        switches: -avr --exclude '.codeclimate.yml' --exclude 'README.md' --exclude '.github' --exclude '.gitignore' --exclude '.git'
+        path: /
+        remote_path: ${{secrets.REMOTE_PATH}}
+        remote_host: ${{secrets.REMOTE_HOST}}
+        remote_user: ${{secrets.REMOTE_USER}}
+        remote_key: ${{secrets.REMOTE_KEY}}
